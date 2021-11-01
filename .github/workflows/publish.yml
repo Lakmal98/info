@@ -1,0 +1,20 @@
+name: "🚀 deploy"
+
+on:
+    push:
+        branches: 
+         - master
+
+jobs:
+    release:
+        name: 🚀 deploy
+        runs-on: ubuntu-latest
+        steps:
+            - name: 📚 checkout
+              uses: actions/checkout@v2
+            - name: 🟢 node
+              uses: actions/setup-node@v1
+              with:
+                  node-version: '17.x'
+            - name: 🚀 deploy
+              run: npm run deploy 
