@@ -16,5 +16,7 @@ jobs:
               uses: actions/setup-node@v1
               with:
                   node-version: '17.x'
+            - name: 📦 install dependencies
+              run: npm install 
             - name: 🚀 deploy
               run: npm run deploy 
