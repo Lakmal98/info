@@ -18,6 +18,8 @@ jobs:
                   node-version: '16.x'
             - name: 📦 install dependencies
               run: npm install 
+            - name: 🔨 build
+              run: npm run build
             - name: 🚀 deploy
               uses: JamesIves/github-pages-deploy-action@4.1.5
               with:
